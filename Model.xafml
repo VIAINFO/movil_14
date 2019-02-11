@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application PreferredLanguage="es" Title="Via Mobile" Company="Developer Express Inc." Copyright="Copyright (C) 2016 {0:Company} ALL RIGHTS RESERVED">
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Edit">
+        <ActionLink ActionId="Signature" IsNewNode="True" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Caption="Plataforma">
+        <Items>
+          <Item Id="Retirar" Caption="Retirar" Index="0" ViewId="ENC_ORDEN_ListView" ImageName="BO_ReportV2_Mobile" IsNewNode="True" />
+          <Item Id="Arribo" ViewId="ARRIBO_ListView" Index="1" ImageName="BO_Event_Mobile" IsNewNode="True" />
+          <Item Id="AboutInfo" ImageName="BO_Task_Mobile" Caption="Entregar" Index="2" ViewId="ENTREGAR_ListView" />
+          <Item Id="MyDetails" Removed="True" />
+          <Item Id="PermissionPolicyRole_ListView" Removed="True" />
+          <Item Id="PermissionPolicyUser_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="18.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <ViewItems>
+    <PropertyEditor Name="PropertyEditors">
+      <RegisteredPropertyEditor PropertyType="System.Boolean" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+      <RegisteredPropertyEditor PropertyType="System.Byte[]" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+      <RegisteredPropertyEditor PropertyType="System.DateTime" DefaultDisplayFormatMobile="shortDate" DefaultEditMaskMobile="shortDate" />
+      <RegisteredPropertyEditor PropertyType="System.Drawing.Image" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+      <RegisteredPropertyEditor PropertyType="System.Int32" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+      <RegisteredPropertyEditor PropertyType="System.String" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+    </PropertyEditor>
+  </ViewItems>
+  <Views>
+    <DetailView Id="ARRIBO_DetailView" ClassName="MainDemo.Module.BusinessObjects.Prueba.ENC_ORDEN" Caption="Orden" AllowDelete="False" MobileVisible="True" IsNewNode="True">
+      <HiddenActions IsNewNode="True">
+        <ActionLink ActionId="ENC_ORDEN.Entregado" IsNewNode="True" />
+        <ActionLink ActionId="SwitchToEditMode" IsNewNode="True" />
+      </HiddenActions>
+      <Items IsNewNode="True">
+        <PropertyEditor Id="CARGA_ALTO" PropertyName="CARGA_ALTO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_ANCHO" PropertyName="CARGA_ANCHO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_CANT" PropertyName="CARGA_CANT" Caption="Carga Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_LARGO" PropertyName="CARGA_LARGO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_PESO" PropertyName="CARGA_PESO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_VOLUMEN" PropertyName="CARGA_VOLUMEN" IsNewNode="True" />
+        <PropertyEditor Id="Cod_Contacto_Orden" PropertyName="Cod_Contacto_Orden" IsNewNode="True" />
+        <PropertyEditor Id="Cod_Empresa_Orden" PropertyName="Cod_Empresa_Orden" IsNewNode="True" />
+        <PropertyEditor Id="COD_INTERNO" PropertyName="COD_INTERNO" IsNewNode="True" />
+        <PropertyEditor Id="COMUNA_E" PropertyName="COMUNA_E" Caption="Comuna" IsNewNode="True" />
+        <PropertyEditor Id="COMUNA_R" PropertyName="COMUNA_R" IsNewNode="True" />
+        <PropertyEditor Id="CORTEGUIA" PropertyName="CORTEGUIA" IsNewNode="True" />
+        <PropertyEditor Id="DESCUENTO" PropertyName="DESCUENTO" IsNewNode="True" />
+        <PropertyEditor Id="DIRECCION_E" PropertyName="DIRECCION_E" Caption="Direccion" IsNewNode="True" />
+        <PropertyEditor Id="DIRECCION_R" PropertyName="DIRECCION_R" IsNewNode="True" />
+        <PropertyEditor Id="EMISOR" PropertyName="EMISOR" Caption="Emisor" IsNewNode="True" />
+        <PropertyEditor Id="ENC_ENCOMIENDAs" PropertyName="ENC_ENCOMIENDAs" Caption="Lista de Encomiendas" LookupEditorMode="AllItems" View="RETIRAR_ENCOMIENDA_ListView" DataSourcePropertyIsNullMode="SelectAll" LinkView="RETIRAR_ENCOMIENDA_ListView" IsNewNode="True" />
+        <PropertyEditor Id="ENC_ENTREGASs" PropertyName="ENC_ENTREGASs" View="ENC_ENTREGAS_ListView" LinkView="ENC_ENTREGAS_ListView" DataSourcePropertyIsNullMode="SelectAll" LookupEditorMode="AllItemsWithSearch" IsNewNode="True" />
+        <PropertyEditor Id="ENTREGA" PropertyName="ENTREGA" IsNewNode="True" />
+        <PropertyEditor Id="ESTADO" PropertyName="ESTADO" IsNewNode="True" />
+        <PropertyEditor Id="ESTADOPAGO" PropertyName="ESTADOPAGO" IsNewNode="True" />
+        <PropertyEditor Id="EXPRESO" PropertyName="EXPRESO" IsNewNode="True" />
+        <PropertyEditor Id="FECHA" PropertyName="FECHA" IsNewNode="True" />
+        <PropertyEditor Id="FLETE" PropertyName="FLETE" IsNewNode="True" />
+        <PropertyEditor Id="FONO_E" PropertyName="FONO_E" Caption="Fono" IsNewNode="True" />
+        <PropertyEditor Id="FONO_R" PropertyName="FONO_R" IsNewNode="True" />
+        <PropertyEditor Id="FORMADEPAGO" PropertyName="FORMADEPAGO" IsNewNode="True" />
+        <PropertyEditor Id="ID_ORDEN" PropertyName="ID_ORDEN" Caption="Orden" IsNewNode="True" />
+        <PropertyEditor Id="OTROS" PropertyName="OTROS" IsNewNode="True" />
+        <PropertyEditor Id="Owner" PropertyName="Owner" IsNewNode="True" />
+        <PropertyEditor Id="PORPAGAR" PropertyName="PORPAGAR" IsNewNode="True" />
+        <PropertyEditor Id="RAZONSOCIAL" PropertyName="RAZONSOCIAL" IsNewNode="True" />
+        <PropertyEditor Id="RECEPTOR" PropertyName="RECEPTOR" IsNewNode="True" />
+        <PropertyEditor Id="REFERENCIA" PropertyName="REFERENCIA" Caption="Referencia" IsNewNode="True" />
+        <PropertyEditor Id="RETIRA" PropertyName="RETIRA" IsNewNode="True" />
+        <PropertyEditor Id="RUT" PropertyName="RUT" IsNewNode="True" />
+        <PropertyEditor Id="SEGURO" PropertyName="SEGURO" IsNewNode="True" />
+        <PropertyEditor Id="SOBRE_CANTIDAD" PropertyName="SOBRE_CANTIDAD" Caption="Sobre Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="SOBRE_PESO" PropertyName="SOBRE_PESO" IsNewNode="True" />
+        <PropertyEditor Id="TOTAL" PropertyName="TOTAL" IsNewNode="True" />
+        <PropertyEditor Id="VALIJA_CANTIDAD" PropertyName="VALIJA_CANTIDAD" Caption="Valija Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="VALIJA_PESO" PropertyName="VALIJA_PESO" IsNewNode="True" />
+        <PropertyEditor Id="VIA" PropertyName="VIA" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+            <LayoutGroup Id="ENC_ORDEN" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="ENC_ORDEN_col1" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="ID_ORDEN" ViewItem="ID_ORDEN" Index="0" RelativeSize="5.9202059202059205" IsNewNode="True" />
+                <LayoutItem Id="REFERENCIA" ViewItem="REFERENCIA" Index="1" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="VALIJA_CANTIDAD" ViewItem="VALIJA_CANTIDAD" Index="2" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="SOBRE_CANTIDAD" ViewItem="SOBRE_CANTIDAD" Index="3" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="CARGA_CANT" ViewItem="CARGA_CANT" Index="4" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="ENC_ENCOMIENDAs" ViewItem="ENC_ENCOMIENDAs" Index="5" RelativeSize="76.576576576576571" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ARRIBO_ListView" ClassName="MainDemo.Module.BusinessObjects.Prueba.ENC_ORDEN" Caption="Retirar" AllowDelete="False" AllowLink="False" AllowNew="False" Criteria="[ESTADO] = 'ENTRANSITO' And [RETIRO_AGENCIA] = CurrentUserId()" MasterDetailView="ARRIBO_DetailView" DetailViewID="ARRIBO_DetailView" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="ID_ORDEN" PropertyName="ID_ORDEN" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="RUT" PropertyName="RUT" Width="70" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="RAZONSOCIAL" PropertyName="RAZONSOCIAL" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="REFERENCIA" PropertyName="REFERENCIA" Width="70" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="FECHA" PropertyName="FECHA" Width="70" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="COD_INTERNO" PropertyName="COD_INTERNO" Width="70" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="VIA" PropertyName="VIA" Width="70" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Owner" PropertyName="Owner" Width="70" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="EXPRESO" PropertyName="EXPRESO" Width="50" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="PORPAGAR" PropertyName="PORPAGAR" Width="50" Index="8" IsNewNode="True" />
+        <ColumnInfo Id="FLETE" PropertyName="FLETE" Width="50" Index="9" IsNewNode="True" />
+        <ColumnInfo Id="CORTEGUIA" PropertyName="CORTEGUIA" Width="50" Index="10" IsNewNode="True" />
+        <ColumnInfo Id="SEGURO" PropertyName="SEGURO" Width="50" Index="11" IsNewNode="True" />
+        <ColumnInfo Id="OTROS" PropertyName="OTROS" Width="50" Index="12" IsNewNode="True" />
+        <ColumnInfo Id="TOTAL" PropertyName="TOTAL" Width="50" Index="13" IsNewNode="True" />
+        <ColumnInfo Id="DESCUENTO" PropertyName="DESCUENTO" Width="50" Index="14" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_CANT" PropertyName="CARGA_CANT" Width="50" Index="15" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_PESO" PropertyName="CARGA_PESO" Width="50" Index="16" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_VOLUMEN" PropertyName="CARGA_VOLUMEN" Width="50" Index="17" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_ANCHO" PropertyName="CARGA_ANCHO" Width="50" Index="18" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_LARGO" PropertyName="CARGA_LARGO" Width="50" Index="19" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_ALTO" PropertyName="CARGA_ALTO" Width="50" Index="20" IsNewNode="True" />
+        <ColumnInfo Id="SOBRE_PESO" PropertyName="SOBRE_PESO" Width="50" Index="21" IsNewNode="True" />
+        <ColumnInfo Id="SOBRE_CANTIDAD" PropertyName="SOBRE_CANTIDAD" Width="50" Index="22" IsNewNode="True" />
+        <ColumnInfo Id="VALIJA_CANTIDAD" PropertyName="VALIJA_CANTIDAD" Width="50" Index="23" IsNewNode="True" />
+        <ColumnInfo Id="VALIJA_PESO" PropertyName="VALIJA_PESO" Width="50" Index="24" IsNewNode="True" />
+        <ColumnInfo Id="EMISOR" PropertyName="EMISOR" Width="70" Index="25" IsNewNode="True" />
+        <ColumnInfo Id="RECEPTOR" PropertyName="RECEPTOR" Width="70" Index="26" IsNewNode="True" />
+        <ColumnInfo Id="ESTADO" PropertyName="ESTADO" Width="70" Index="27" IsNewNode="True" />
+        <ColumnInfo Id="FORMADEPAGO" PropertyName="FORMADEPAGO" Width="70" Index="28" IsNewNode="True" />
+        <ColumnInfo Id="ESTADOPAGO" PropertyName="ESTADOPAGO" Width="70" Index="29" IsNewNode="True" />
+        <ColumnInfo Id="DIRECCION_E" PropertyName="DIRECCION_E" Width="70" Index="30" IsNewNode="True" />
+        <ColumnInfo Id="DIRECCION_R" PropertyName="DIRECCION_R" Width="70" Index="31" IsNewNode="True" />
+        <ColumnInfo Id="COMUNA_E" PropertyName="COMUNA_E" Width="70" Index="32" DataSourcePropertyIsNullMode="SelectAll" LookupProperty="COMUNA" IsNewNode="True" />
+        <ColumnInfo Id="COMUNA_R" PropertyName="COMUNA_R" Width="70" Index="33" LookupProperty="COMUNA" IsNewNode="True" />
+        <ColumnInfo Id="FONO_E" PropertyName="FONO_E" Width="70" Index="34" IsNewNode="True" />
+        <ColumnInfo Id="FONO_R" PropertyName="FONO_R" Width="70" Index="35" IsNewNode="True" />
+        <ColumnInfo Id="Cod_Empresa_Orden" PropertyName="Cod_Empresa_Orden" Width="50" Index="36" IsNewNode="True" />
+        <ColumnInfo Id="Cod_Contacto_Orden" PropertyName="Cod_Contacto_Orden" Width="50" Index="37" IsNewNode="True" />
+        <ColumnInfo Id="RETIRA" PropertyName="RETIRA" Width="70" Index="38" IsNewNode="True" />
+        <ColumnInfo Id="ENTREGA" PropertyName="ENTREGA" Width="70" Index="39" IsNewNode="True" />
+      </Columns>
+      <HiddenActions IsNewNode="True">
+        <ActionLink ActionId="ENC_ORDEN.Entregado" IsNewNode="True" />
+      </HiddenActions>
+      <RowLayout IsNewNode="True">
+        <RowLayoutItem Id="ORDEN" Column="ID_ORDEN" ShowCaption="False" Index="1" IsNewNode="True" />
+        <RowLayoutItem Id="RUT" ShowCaption="False" Index="2" Column="RECEPTOR" IsNewNode="True" />
+        <RowLayoutItem Id="DIRECCION" Index="3" ShowCaption="False" Column="DIRECCION_R" IsNewNode="True" />
+        <RowLayoutItem Id="COMUNA" ShowCaption="False" Column="COMUNA_R" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" MobileVisible="True" DefaultFocusedItem="UserName">
+      <Items>
+        <StaticText Id="LogonText" HorizontalAlign="Center" />
+        <StaticText Id="PasswordHint" Text="Welcome! Please enter your user name and password below." HorizontalAlign="Center" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="RootGroup" RelativeSize="100">
+            <LayoutGroup Id="ImageGroup" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="9.3394077448747161" IsNewNode="True" Removed="True">
+              <LayoutItem Id="LogonText" ViewItem="LogonText" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="EditorsGroup" RelativeSize="90.66059225512528" Index="1">
+              <LayoutGroup Id="Editors" Index="0" RelativeSize="100">
+                <LayoutItem Id="UserName" Index="0" RelativeSize="10.804020100502513" />
+                <LayoutItem Id="Password" Index="1" RelativeSize="8.5427135678391952" />
+                <LayoutItem Id="PasswordHint" ViewItem="PasswordHint" Index="2" RelativeSize="80.653266331658287" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ENC_ENCOMIENDA_DetailView" AllowDelete="False" AllowEdit="False" AllowNew="False">
+      <Items>
+        <PropertyEditor Id="TIPO" LookupProperty="BULTO" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ENC_ENCOMIENDA" ShowCaption="False" RelativeSize="100">
+              <LayoutGroup Id="ENC_ENCOMIENDA_col1" RelativeSize="50">
+                <LayoutItem Id="ID_ENCOMIENDA" RelativeSize="5.9202059202059205" />
+                <LayoutItem Id="TIPO" ViewItem="TIPO" Index="1" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="Descripcion" ViewItem="Descripcion" Index="2" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="COD_PROPIO" RelativeSize="85.328185328185327" Index="3" />
+                <LayoutItem Id="ESTADO" RelativeSize="80.952380952380949" Index="4" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ENC_ENCOMIENDA_col2" RelativeSize="50" Direction="Horizontal">
+                <LayoutItem Id="Descripcion" RelativeSize="5.9202059202059205" Index="0" Removed="True" />
+                <LayoutItem Id="TIPO" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="Cod_Orden" RelativeSize="5.333333333333333" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ENC_ENCOMIENDA_ListView" AllowDelete="False" AllowLink="False" AllowNew="False" AllowEdit="True" MasterDetailView="" />
+    <ListView Id="ENC_ENCOMIENDA_LookupListView" AllowEdit="True" AllowDelete="False" AllowLink="False" AllowNew="False" DetailViewID="" MasterDetailView="" PreviewColumnName="">
+      <Columns>
+        <ColumnInfo Id="TIPO" LookupProperty="BULTO" />
+      </Columns>
+      <RowLayout>
+        <RowLayoutItem Id="COD_PROPIO" Column="ID_ENCOMIENDA" Removed="True" />
+        <RowLayoutItem Id="codigo" Column="ID_ENCOMIENDA" ShowCaption="False" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+    <DetailView Id="ENC_ENTREGAS_DetailView" MobileVisible="True" Caption="Visita">
+      <HiddenActions>
+        <ActionLink ActionId="Scan" IsNewNode="True" />
+      </HiddenActions>
+      <Items>
+        <PropertyEditor Id="COD_ENCOMIENDA" Caption="Codigo Interno" />
+        <PropertyEditor Id="COMENTARIO" Caption="Comentario" />
+        <PropertyEditor Id="CONFORME" ImageForFalse="" ImageForTrue="" Caption="Conforme" />
+        <PropertyEditor Id="FIRMA" Caption="Firma" AllowEdit="True" />
+        <PropertyEditor Id="Photo" Caption="Foto" />
+        <PropertyEditor Id="RECIBE" Caption="Recibe" />
+        <PropertyEditor Id="RUT" Caption="Rut" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutItem Id="Resultado" ViewItem="Resultado" Index="0" RelativeSize="5.9202059202059205" IsNewNode="True" />
+            <LayoutItem Id="BAJO_PUERTA" ViewItem="BAJO_PUERTA" Index="1" RelativeSize="4.1184041184041185" IsNewNode="True" />
+            <LayoutGroup Id="ENC_ENTREGAS" RelativeSize="13.211845102505695" Direction="Vertical" Index="1" Removed="True">
+              <LayoutGroup Id="ENC_ENTREGAS_col1" RelativeSize="100" Direction="Horizontal">
+                <LayoutItem Id="COD_ENCOMIENDA" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="RECIBE" RelativeSize="50" Index="0" Removed="True" />
+                <LayoutItem Id="RUT" RelativeSize="36.507936507936506" Index="0" Removed="True" />
+                <LayoutItem Id="ID_ENTREGA" RelativeSize="23.668639053254438" Removed="True" />
+                <LayoutItem Id="Photo" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ENC_ENTREGAS_col2" RelativeSize="50.137741046831955" Caption="ENC_ENTREGAS_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="CONFORME" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="ESTADO" RelativeSize="23.668639053254438" Removed="True" />
+                <LayoutItem Id="FECHA_RECEPCION" RelativeSize="18.934911242603551" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="TIMBRE" ViewItem="TIMBRE" Index="2" RelativeSize="4.1184041184041185" IsNewNode="True" />
+            <LayoutItem Id="Photo" ShowCaption="True" ViewItem="Photo" Index="3" RelativeSize="48.391248391248389" CaptionLocation="Top" IsNewNode="True" />
+            <LayoutItem Id="RUT" ViewItem="RUT" Index="4" RelativeSize="4.3758043758043756" IsNewNode="True" />
+            <LayoutItem Id="RECIBE" ViewItem="RECIBE" Index="5" RelativeSize="4.3758043758043756" IsNewNode="True" />
+            <LayoutItem Id="CONFORME" ViewItem="CONFORME" Index="6" RelativeSize="4.1184041184041185" IsNewNode="True" />
+            <LayoutItem Id="COMENTARIO" ViewItem="COMENTARIO" Index="7" RelativeSize="15.057915057915057" IsNewNode="True" />
+            <LayoutItem Id="FIRMA" ViewItem="FIRMA" Index="8" RelativeSize="9.5238095238095237" ShowCaption="True" CaptionLocation="Top" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="COMENTARIO" Direction="Horizontal" RelativeSize="61.866666666666667" Removed="True">
+            <LayoutItem Id="COMENTARIO" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ENC_ENTREGAS_ListView" MobileVisible="True" Caption="Lista de Entrega" AllowLink="False" AllowUnlink="False" AllowEdit="True">
+      <RowLayout>
+        <RowLayoutItem Id="Rut" ShowCaption="False" Column="RECIBE" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+    <ListView Id="ENC_ENTREGAS_LookupListView" AllowDelete="True" Caption="Registros" AllowEdit="True" AllowLink="False" AllowUnlink="False" />
+    <ListView Id="ENC_HISTORIA_ORDEN_ListView" MobileVisible="True" Criteria="[HIS_ESTADO] = 'RETIRAR' And [HIS_REALIZADO] = False" AllowLink="False" AllowUnlink="False" AllowEdit="True">
+      <RowLayout>
+        <RowLayoutItem Id="CONTACTO" Column="HIS_CONTACTO" ShowCaption="False" Index="2" IsNewNode="True" />
+        <RowLayoutItem Id="DIRECCION" Column="HIS_DIRECCION" Index="3" ShowCaption="False" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+    <ListView Id="ENC_HISTORIA_ORDEN_LookupListView" AllowEdit="True" AllowLink="False" AllowUnlink="False" />
+    <DetailView Id="ENC_ORDEN_DetailView" Caption="Orden" AllowDelete="False" AllowEdit="True" AllowNew="False" MobileVisible="True">
+      <Items>
+        <PropertyEditor Id="CARGA_CANT" Caption="Carga Cantidad" />
+        <PropertyEditor Id="COMUNA_E" Caption="Comuna" />
+        <PropertyEditor Id="DIRECCION_E" Caption="Direccion" />
+        <PropertyEditor Id="EMISOR" Caption="Emisor" />
+        <PropertyEditor Id="ENC_ENCOMIENDAs" Caption="Lista de Encomiendas" LinkView="" />
+        <PropertyEditor Id="FONO_E" Caption="Fono" />
+        <PropertyEditor Id="ID_ORDEN" Caption="Orden" />
+        <PropertyEditor Id="REFERENCIA" Caption="Referencia" />
+        <PropertyEditor Id="SOBRE_CANTIDAD" Caption="Sobre Cantidad" />
+        <PropertyEditor Id="VALIJA_CANTIDAD" Caption="Valija Cantidad" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ENC_ORDEN" RelativeSize="28.957528957528957" Direction="Vertical" ShowCaption="False">
+              <LayoutGroup Id="ENC_ORDEN_col1" RelativeSize="100" Direction="Vertical" Caption="ENC_ORDEN_col1">
+                <LayoutItem Id="ID_ORDEN" ViewItem="ID_ORDEN" Index="0" RelativeSize="20.444444444444443" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="REFERENCIA" ViewItem="REFERENCIA" Index="1" RelativeSize="15.111111111111111" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="VALIJA_CANTIDAD" ViewItem="VALIJA_CANTIDAD" Index="2" RelativeSize="15.111111111111111" IsNewNode="True" />
+                <LayoutItem Id="SOBRE_CANTIDAD" ViewItem="SOBRE_CANTIDAD" Index="3" RelativeSize="15.111111111111111" IsNewNode="True" />
+                <LayoutItem Id="CARGA_CANT" ViewItem="CARGA_CANT" Index="4" RelativeSize="15.111111111111111" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="CARGA_ALTO" Index="5" RelativeSize="19.111111111111111" />
+                <LayoutItem Id="CARGA_VOLUMEN" RelativeSize="7.2784810126582276" Index="17" Removed="True" />
+                <LayoutItem Id="CARGA_ANCHO" RelativeSize="6.5714285714285712" Removed="True" />
+                <LayoutItem Id="CARGA_LARGO" Removed="True" />
+                <LayoutItem Id="CARGA_PESO" RelativeSize="5.1051051051051051" Removed="True" />
+                <LayoutItem Id="COD_INTERNO" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="CORTEGUIA" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="DESCUENTO" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="EXPRESO" RelativeSize="4.9342105263157894" Removed="True" />
+                <LayoutItem Id="FECHA" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="FLETE" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="OTROS" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="Owner" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="PORPAGAR" RelativeSize="4.9342105263157894" Removed="True" />
+                <LayoutItem Id="RAZONSOCIAL" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="RUT" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="SEGURO" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="TOTAL" RelativeSize="5.2631578947368425" Removed="True" />
+                <LayoutItem Id="VIA" RelativeSize="5.2631578947368425" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ENC_ORDEN_col2" RelativeSize="50" Caption="ENC_ORDEN_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="CARGA_ALTO" RelativeSize="6.968641114982578" Index="0" Removed="True" />
+                <LayoutItem Id="COMUNA_R" RelativeSize="11.486486486486486" Index="0" Removed="True" />
+                <LayoutItem Id="DIRECCION_E" RelativeSize="20.17543859649123" Index="0" Removed="True" />
+                <LayoutItem Id="DIRECCION_R" ViewItem="DIRECCION_R" Index="0" RelativeSize="14.705882352941176" Removed="True" />
+                <LayoutItem Id="EMISOR" RelativeSize="11.557788944723619" Index="0" Removed="True" />
+                <LayoutItem Id="ESTADO" RelativeSize="13.939393939393939" Index="0" Removed="True" />
+                <LayoutItem Id="ESTADOPAGO" RelativeSize="17.557251908396946" Index="0" Removed="True" />
+                <LayoutItem Id="FONO_E" RelativeSize="11.486486486486486" Index="0" Removed="True" />
+                <LayoutItem Id="FONO_R" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="FORMADEPAGO" RelativeSize="15.54054054054054" Index="0" Removed="True" />
+                <LayoutItem Id="RECEPTOR" RelativeSize="12.637362637362637" Index="0" Removed="True" />
+                <LayoutItem Id="SOBRE_CANTIDAD" RelativeSize="7.9051383399209483" Index="0" Removed="True" />
+                <LayoutItem Id="SOBRE_PESO" RelativeSize="7.4074074074074074" Index="0" Removed="True" />
+                <LayoutItem Id="VALIJA_CANTIDAD" RelativeSize="9.8712446351931327" Index="0" Removed="True" />
+                <LayoutItem Id="VALIJA_PESO" RelativeSize="10.648148148148149" Index="0" Removed="True" />
+                <LayoutItem Id="COMUNA_E" RelativeSize="12.977099236641221" Index="1" Removed="True" />
+                <LayoutItem Id="CARGA_LARGO" RelativeSize="6.5789473684210522" Removed="True" />
+                <LayoutItem Id="Cod_Contacto_Orden" RelativeSize="11.614730878186968" Removed="True" />
+                <LayoutItem Id="Cod_Empresa_Orden" RelativeSize="15.714285714285714" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" Index="1" RelativeSize="71.042471042471036" IsNewNode="True">
+              <LayoutItem Id="ENC_ENCOMIENDAs" ViewItem="ENC_ENCOMIENDAs" Index="0" RelativeSize="91.485507246376812" IsNewNode="True" />
+              <LayoutItem Id="Photo" ViewItem="Photo" Index="1" RelativeSize="8.5144927536231876" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="4.3478260869565215" Removed="True">
+            <LayoutGroup Id="ENC_ENCOMIENDAs" RelativeSize="0" Direction="Horizontal">
+              <LayoutItem Id="ENC_ENCOMIENDAs" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ENC_HISTORIA_ORDENs" Direction="Horizontal">
+              <LayoutItem Id="ENC_HISTORIA_ORDENs" Removed="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ENC_ORDEN_ENC_ENCOMIENDAs_ListView" Caption="Encomiendas" AllowDelete="True" AllowEdit="True" AllowLink="False" AllowNew="True" MobileVisible="True" PreviewColumnName="" DetailViewID="ENC_ENCOMIENDA_DetailView" MasterDetailView="ENC_ENCOMIENDA_DetailView">
+      <Columns>
+        <ColumnInfo Id="COD_PROPIO" Width="197" Index="-1" />
+        <ColumnInfo Id="Descripcion" Index="-1" />
+        <ColumnInfo Id="ESTADO" Width="273" Index="-1" />
+        <ColumnInfo Id="TIPO" LookupProperty="BULTO" DataSourcePropertyIsNullMode="SelectAll" SortIndex="0" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="ID_ENCOMIENDA" Index="1" SortIndex="-1" SortOrder="None" />
+      </Columns>
+      <RowLayout>
+        <RowLayoutItem Id="TIPO" Column="TIPO" ShowCaption="False" Index="1" IsNewNode="True" />
+        <RowLayoutItem Id="COD_PROPIO" Index="2" Column="ID_ENCOMIENDA" />
+      </RowLayout>
+    </ListView>
+    <ListView Id="ENC_ORDEN_ENC_ENTREGASs_ListView" AllowEdit="True" AllowUnlink="False" AllowLink="False" />
+    <ListView Id="ENC_ORDEN_ListView" Caption="Retirar" AllowDelete="False" AllowLink="False" AllowNew="False" Criteria="[ESTADO] = 'RETIRAR' And [RETIRA] = CurrentUserId()">
+      <Columns>
+        <ColumnInfo Id="COMUNA_E" DataSourcePropertyIsNullMode="SelectAll" LookupProperty="COMUNA" />
+      </Columns>
+      <RowLayout>
+        <RowLayoutItem Id="ORDEN" Column="ID_ORDEN" ShowCaption="False" Index="1" IsNewNode="True" />
+        <RowLayoutItem Id="RUT" Index="2" Column="EMISOR" />
+        <RowLayoutItem Id="DIRECCION" Column="DIRECCION_E" Index="3" ShowCaption="False" IsNewNode="True" />
+        <RowLayoutItem Id="COMUNA" Column="COMUNA_E" ShowCaption="False" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+    <ListView Id="ENC_ORDEN_LookupListView">
+      <Columns>
+        <ColumnInfo Id="CORTEGUIA" Width="104" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ENTREGAR_DetailView" ClassName="MainDemo.Module.BusinessObjects.Prueba.ENC_ORDEN" Caption="Orden" AllowDelete="False" AllowEdit="True" AllowNew="True" MobileVisible="True" IsNewNode="True">
+      <HiddenActions IsNewNode="True">
+        <ActionLink ActionId="ENC_ORDEN.Entregado" IsNewNode="True" />
+        <ActionLink ActionId="SwitchToEditMode" IsNewNode="True" />
+      </HiddenActions>
+      <Items IsNewNode="True">
+        <PropertyEditor Id="CARGA_ALTO" PropertyName="CARGA_ALTO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_ANCHO" PropertyName="CARGA_ANCHO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_CANT" PropertyName="CARGA_CANT" Caption="Carga Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_LARGO" PropertyName="CARGA_LARGO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_PESO" PropertyName="CARGA_PESO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_VOLUMEN" PropertyName="CARGA_VOLUMEN" IsNewNode="True" />
+        <PropertyEditor Id="Cod_Contacto_Orden" PropertyName="Cod_Contacto_Orden" IsNewNode="True" />
+        <PropertyEditor Id="Cod_Empresa_Orden" PropertyName="Cod_Empresa_Orden" IsNewNode="True" />
+        <PropertyEditor Id="COD_INTERNO" PropertyName="COD_INTERNO" IsNewNode="True" />
+        <PropertyEditor Id="COMUNA_E" PropertyName="COMUNA_E" Caption="Comuna" IsNewNode="True" />
+        <PropertyEditor Id="COMUNA_R" PropertyName="COMUNA_R" IsNewNode="True" />
+        <PropertyEditor Id="CORTEGUIA" PropertyName="CORTEGUIA" IsNewNode="True" />
+        <PropertyEditor Id="DESCUENTO" PropertyName="DESCUENTO" IsNewNode="True" />
+        <PropertyEditor Id="DIRECCION_E" PropertyName="DIRECCION_E" Caption="Direccion" IsNewNode="True" />
+        <PropertyEditor Id="DIRECCION_R" PropertyName="DIRECCION_R" IsNewNode="True" />
+        <PropertyEditor Id="EMISOR" PropertyName="EMISOR" Caption="Emisor" IsNewNode="True" />
+        <PropertyEditor Id="ENC_ENCOMIENDAs" PropertyName="ENC_ENCOMIENDAs" Caption="Lista de Encomiendas" LookupEditorMode="AllItems" View="RETIRAR_ENCOMIENDA_ListView" DataSourcePropertyIsNullMode="SelectAll" LinkView="RETIRAR_ENCOMIENDA_ListView" IsNewNode="True" />
+        <PropertyEditor Id="ENC_ENTREGASs" PropertyName="ENC_ENTREGASs" View="ENC_ENTREGAS_ListView" LinkView="ENC_ENTREGAS_ListView" DataSourcePropertyIsNullMode="SelectAll" LookupEditorMode="AllItemsWithSearch" VariantShowItem="Default" IsNewNode="True" />
+        <PropertyEditor Id="ENTREGA" PropertyName="ENTREGA" IsNewNode="True" />
+        <PropertyEditor Id="ESTADO" PropertyName="ESTADO" IsNewNode="True" />
+        <PropertyEditor Id="ESTADOPAGO" PropertyName="ESTADOPAGO" IsNewNode="True" />
+        <PropertyEditor Id="EXPRESO" PropertyName="EXPRESO" IsNewNode="True" />
+        <PropertyEditor Id="FECHA" PropertyName="FECHA" IsNewNode="True" />
+        <PropertyEditor Id="FLETE" PropertyName="FLETE" IsNewNode="True" />
+        <PropertyEditor Id="FONO_E" PropertyName="FONO_E" Caption="Fono" IsNewNode="True" />
+        <PropertyEditor Id="FONO_R" PropertyName="FONO_R" IsNewNode="True" />
+        <PropertyEditor Id="FORMADEPAGO" PropertyName="FORMADEPAGO" IsNewNode="True" />
+        <PropertyEditor Id="ID_ORDEN" PropertyName="ID_ORDEN" Caption="Orden" IsNewNode="True" />
+        <PropertyEditor Id="OTROS" PropertyName="OTROS" IsNewNode="True" />
+        <PropertyEditor Id="Owner" PropertyName="Owner" IsNewNode="True" />
+        <PropertyEditor Id="PORPAGAR" PropertyName="PORPAGAR" IsNewNode="True" />
+        <PropertyEditor Id="RAZONSOCIAL" PropertyName="RAZONSOCIAL" IsNewNode="True" />
+        <PropertyEditor Id="RECEPTOR" PropertyName="RECEPTOR" IsNewNode="True" />
+        <PropertyEditor Id="REFERENCIA" PropertyName="REFERENCIA" Caption="Referencia" IsNewNode="True" />
+        <PropertyEditor Id="RETIRA" PropertyName="RETIRA" IsNewNode="True" />
+        <PropertyEditor Id="RUT" PropertyName="RUT" IsNewNode="True" />
+        <PropertyEditor Id="SEGURO" PropertyName="SEGURO" IsNewNode="True" />
+        <PropertyEditor Id="SOBRE_CANTIDAD" PropertyName="SOBRE_CANTIDAD" Caption="Sobre Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="SOBRE_PESO" PropertyName="SOBRE_PESO" IsNewNode="True" />
+        <PropertyEditor Id="TOTAL" PropertyName="TOTAL" IsNewNode="True" />
+        <PropertyEditor Id="VALIJA_CANTIDAD" PropertyName="VALIJA_CANTIDAD" Caption="Valija Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="VALIJA_PESO" PropertyName="VALIJA_PESO" IsNewNode="True" />
+        <PropertyEditor Id="VIA" PropertyName="VIA" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+            <LayoutGroup Id="ENC_ORDEN" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="ENC_ORDEN_col1" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="ID_ORDEN" ViewItem="ID_ORDEN" Index="0" RelativeSize="5.9202059202059205" IsNewNode="True" />
+                <LayoutItem Id="REFERENCIA" ViewItem="REFERENCIA" Index="1" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="VALIJA_CANTIDAD" ViewItem="VALIJA_CANTIDAD" Index="2" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="SOBRE_CANTIDAD" ViewItem="SOBRE_CANTIDAD" Index="3" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="CARGA_CANT" ViewItem="CARGA_CANT" Index="4" RelativeSize="4.3758043758043756" IsNewNode="True" />
+                <LayoutItem Id="ENC_ENCOMIENDAs" ViewItem="ENC_ENCOMIENDAs" Index="5" RelativeSize="14.929214929214929" IsNewNode="True" />
+                <LayoutItem Id="ENC_ENTREGASs" ViewItem="ENC_ENTREGASs" Index="6" RelativeSize="61.647361647361649" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ENTREGAR_ListView" ClassName="MainDemo.Module.BusinessObjects.Prueba.ENC_ORDEN" Caption="Retirar" AllowDelete="False" AllowLink="False" AllowNew="False" Criteria="[ESTADO] = 'ENTREGAR' And [ENTREGA] = CurrentUserId()" MasterDetailView="ENTREGAR_DetailView" DetailViewID="ENTREGAR_DetailView" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="ID_ORDEN" PropertyName="ID_ORDEN" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="RUT" PropertyName="RUT" Width="70" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="RAZONSOCIAL" PropertyName="RAZONSOCIAL" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="REFERENCIA" PropertyName="REFERENCIA" Width="70" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="FECHA" PropertyName="FECHA" Width="70" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="COD_INTERNO" PropertyName="COD_INTERNO" Width="70" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="VIA" PropertyName="VIA" Width="70" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Owner" PropertyName="Owner" Width="70" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="EXPRESO" PropertyName="EXPRESO" Width="50" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="PORPAGAR" PropertyName="PORPAGAR" Width="50" Index="8" IsNewNode="True" />
+        <ColumnInfo Id="FLETE" PropertyName="FLETE" Width="50" Index="9" IsNewNode="True" />
+        <ColumnInfo Id="CORTEGUIA" PropertyName="CORTEGUIA" Width="50" Index="10" IsNewNode="True" />
+        <ColumnInfo Id="SEGURO" PropertyName="SEGURO" Width="50" Index="11" IsNewNode="True" />
+        <ColumnInfo Id="OTROS" PropertyName="OTROS" Width="50" Index="12" IsNewNode="True" />
+        <ColumnInfo Id="TOTAL" PropertyName="TOTAL" Width="50" Index="13" IsNewNode="True" />
+        <ColumnInfo Id="DESCUENTO" PropertyName="DESCUENTO" Width="50" Index="14" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_CANT" PropertyName="CARGA_CANT" Width="50" Index="15" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_PESO" PropertyName="CARGA_PESO" Width="50" Index="16" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_VOLUMEN" PropertyName="CARGA_VOLUMEN" Width="50" Index="17" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_ANCHO" PropertyName="CARGA_ANCHO" Width="50" Index="18" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_LARGO" PropertyName="CARGA_LARGO" Width="50" Index="19" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_ALTO" PropertyName="CARGA_ALTO" Width="50" Index="20" IsNewNode="True" />
+        <ColumnInfo Id="SOBRE_PESO" PropertyName="SOBRE_PESO" Width="50" Index="21" IsNewNode="True" />
+        <ColumnInfo Id="SOBRE_CANTIDAD" PropertyName="SOBRE_CANTIDAD" Width="50" Index="22" IsNewNode="True" />
+        <ColumnInfo Id="VALIJA_CANTIDAD" PropertyName="VALIJA_CANTIDAD" Width="50" Index="23" IsNewNode="True" />
+        <ColumnInfo Id="VALIJA_PESO" PropertyName="VALIJA_PESO" Width="50" Index="24" IsNewNode="True" />
+        <ColumnInfo Id="EMISOR" PropertyName="EMISOR" Width="70" Index="25" IsNewNode="True" />
+        <ColumnInfo Id="RECEPTOR" PropertyName="RECEPTOR" Width="70" Index="26" IsNewNode="True" />
+        <ColumnInfo Id="ESTADO" PropertyName="ESTADO" Width="70" Index="27" IsNewNode="True" />
+        <ColumnInfo Id="FORMADEPAGO" PropertyName="FORMADEPAGO" Width="70" Index="28" IsNewNode="True" />
+        <ColumnInfo Id="ESTADOPAGO" PropertyName="ESTADOPAGO" Width="70" Index="29" IsNewNode="True" />
+        <ColumnInfo Id="DIRECCION_E" PropertyName="DIRECCION_E" Width="70" Index="30" IsNewNode="True" />
+        <ColumnInfo Id="DIRECCION_R" PropertyName="DIRECCION_R" Width="70" Index="31" IsNewNode="True" />
+        <ColumnInfo Id="COMUNA_E" PropertyName="COMUNA_E" Width="70" Index="32" DataSourcePropertyIsNullMode="SelectAll" LookupProperty="COMUNA" IsNewNode="True" />
+        <ColumnInfo Id="COMUNA_R" PropertyName="COMUNA_R" Width="70" Index="33" LookupProperty="COMUNA" IsNewNode="True" />
+        <ColumnInfo Id="FONO_E" PropertyName="FONO_E" Width="70" Index="34" IsNewNode="True" />
+        <ColumnInfo Id="FONO_R" PropertyName="FONO_R" Width="70" Index="35" IsNewNode="True" />
+        <ColumnInfo Id="Cod_Empresa_Orden" PropertyName="Cod_Empresa_Orden" Width="50" Index="36" IsNewNode="True" />
+        <ColumnInfo Id="Cod_Contacto_Orden" PropertyName="Cod_Contacto_Orden" Width="50" Index="37" IsNewNode="True" />
+        <ColumnInfo Id="RETIRA" PropertyName="RETIRA" Width="70" Index="38" IsNewNode="True" />
+        <ColumnInfo Id="ENTREGA" PropertyName="ENTREGA" Width="70" Index="39" IsNewNode="True" />
+      </Columns>
+      <HiddenActions IsNewNode="True">
+        <ActionLink ActionId="ENC_ORDEN.Entregado" IsNewNode="True" />
+      </HiddenActions>
+      <RowLayout IsNewNode="True">
+        <RowLayoutItem Id="ORDEN" Column="ID_ORDEN" ShowCaption="False" Index="1" IsNewNode="True" />
+        <RowLayoutItem Id="RUT" ShowCaption="False" Index="2" Column="RECEPTOR" IsNewNode="True" />
+        <RowLayoutItem Id="DIRECCION" Index="3" ShowCaption="False" Column="DIRECCION_R" IsNewNode="True" />
+        <RowLayoutItem Id="COMUNA" ShowCaption="False" Column="COMUNA_R" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+    <DetailView Id="RETIRAR_DetailView" ClassName="MainDemo.Module.BusinessObjects.Prueba.ENC_ORDEN" Caption="Orden" AllowDelete="False" AllowEdit="False" AllowNew="False" MobileVisible="True" IsNewNode="True">
+      <Items IsNewNode="True">
+        <PropertyEditor Id="CARGA_ALTO" PropertyName="CARGA_ALTO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_ANCHO" PropertyName="CARGA_ANCHO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_CANT" PropertyName="CARGA_CANT" Caption="Carga Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_LARGO" PropertyName="CARGA_LARGO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_PESO" PropertyName="CARGA_PESO" IsNewNode="True" />
+        <PropertyEditor Id="CARGA_VOLUMEN" PropertyName="CARGA_VOLUMEN" IsNewNode="True" />
+        <PropertyEditor Id="Cod_Contacto_Orden" PropertyName="Cod_Contacto_Orden" IsNewNode="True" />
+        <PropertyEditor Id="Cod_Empresa_Orden" PropertyName="Cod_Empresa_Orden" IsNewNode="True" />
+        <PropertyEditor Id="COD_INTERNO" PropertyName="COD_INTERNO" IsNewNode="True" />
+        <PropertyEditor Id="COMUNA_E" PropertyName="COMUNA_E" Caption="Comuna" IsNewNode="True" />
+        <PropertyEditor Id="COMUNA_R" PropertyName="COMUNA_R" IsNewNode="True" />
+        <PropertyEditor Id="CORTEGUIA" PropertyName="CORTEGUIA" IsNewNode="True" />
+        <PropertyEditor Id="DESCUENTO" PropertyName="DESCUENTO" IsNewNode="True" />
+        <PropertyEditor Id="DIRECCION_E" PropertyName="DIRECCION_E" Caption="Direccion" IsNewNode="True" />
+        <PropertyEditor Id="DIRECCION_R" PropertyName="DIRECCION_R" IsNewNode="True" />
+        <PropertyEditor Id="EMISOR" PropertyName="EMISOR" Caption="Emisor" IsNewNode="True" />
+        <PropertyEditor Id="ENC_ENCOMIENDAs" PropertyName="ENC_ENCOMIENDAs" Caption="Lista de Encomiendas" LookupEditorMode="AllItems" View="RETIRAR_ENCOMIENDA_ListView" DataSourcePropertyIsNullMode="SelectAll" LinkView="RETIRAR_ENCOMIENDA_ListView" IsNewNode="True" />
+        <PropertyEditor Id="ENTREGA" PropertyName="ENTREGA" IsNewNode="True" />
+        <PropertyEditor Id="ESTADO" PropertyName="ESTADO" IsNewNode="True" />
+        <PropertyEditor Id="ESTADOPAGO" PropertyName="ESTADOPAGO" IsNewNode="True" />
+        <PropertyEditor Id="EXPRESO" PropertyName="EXPRESO" IsNewNode="True" />
+        <PropertyEditor Id="FECHA" PropertyName="FECHA" IsNewNode="True" />
+        <PropertyEditor Id="FLETE" PropertyName="FLETE" IsNewNode="True" />
+        <PropertyEditor Id="FONO_E" PropertyName="FONO_E" Caption="Fono" IsNewNode="True" />
+        <PropertyEditor Id="FONO_R" PropertyName="FONO_R" IsNewNode="True" />
+        <PropertyEditor Id="FORMADEPAGO" PropertyName="FORMADEPAGO" IsNewNode="True" />
+        <PropertyEditor Id="ID_ORDEN" PropertyName="ID_ORDEN" Caption="Orden" IsNewNode="True" />
+        <PropertyEditor Id="OTROS" PropertyName="OTROS" IsNewNode="True" />
+        <PropertyEditor Id="Owner" PropertyName="Owner" IsNewNode="True" />
+        <PropertyEditor Id="Photo" PropertyName="Photo" IsNewNode="True" />
+        <PropertyEditor Id="PORPAGAR" PropertyName="PORPAGAR" IsNewNode="True" />
+        <PropertyEditor Id="RAZONSOCIAL" PropertyName="RAZONSOCIAL" IsNewNode="True" />
+        <PropertyEditor Id="RECEPTOR" PropertyName="RECEPTOR" IsNewNode="True" />
+        <PropertyEditor Id="REFERENCIA" PropertyName="REFERENCIA" Caption="Referencia" IsNewNode="True" />
+        <PropertyEditor Id="RETIRA" PropertyName="RETIRA" IsNewNode="True" />
+        <PropertyEditor Id="RUT" PropertyName="RUT" IsNewNode="True" />
+        <PropertyEditor Id="SEGURO" PropertyName="SEGURO" IsNewNode="True" />
+        <PropertyEditor Id="SOBRE_CANTIDAD" PropertyName="SOBRE_CANTIDAD" Caption="Sobre Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="SOBRE_PESO" PropertyName="SOBRE_PESO" IsNewNode="True" />
+        <PropertyEditor Id="TOTAL" PropertyName="TOTAL" IsNewNode="True" />
+        <PropertyEditor Id="VALIJA_CANTIDAD" PropertyName="VALIJA_CANTIDAD" Caption="Valija Cantidad" IsNewNode="True" />
+        <PropertyEditor Id="VALIJA_PESO" PropertyName="VALIJA_PESO" IsNewNode="True" />
+        <PropertyEditor Id="VIA" PropertyName="VIA" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+            <LayoutGroup Id="ENC_ORDEN" Index="0" ShowCaption="False" RelativeSize="27.927927927927929" IsNewNode="True">
+              <LayoutGroup Id="ENC_ORDEN_col1" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="ID_ORDEN" ViewItem="ID_ORDEN" Index="0" RelativeSize="21.198156682027651" IsNewNode="True" />
+                <LayoutItem Id="REFERENCIA" ViewItem="REFERENCIA" Index="1" RelativeSize="15.668202764976959" IsNewNode="True" />
+                <LayoutItem Id="VALIJA_CANTIDAD" ViewItem="VALIJA_CANTIDAD" Index="2" RelativeSize="15.668202764976959" IsNewNode="True" />
+                <LayoutItem Id="SOBRE_CANTIDAD" ViewItem="SOBRE_CANTIDAD" Index="3" RelativeSize="15.668202764976959" IsNewNode="True" />
+                <LayoutItem Id="CARGA_CANT" ViewItem="CARGA_CANT" Index="4" RelativeSize="15.668202764976959" IsNewNode="True" />
+                <LayoutItem Id="Photo" ViewItem="Photo" Index="5" RelativeSize="16.129032258064516" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" Index="1" RelativeSize="72.072072072072075" IsNewNode="True">
+              <LayoutItem Id="ENC_ENCOMIENDAs" ViewItem="ENC_ENCOMIENDAs" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RETIRAR_ENCOMIENDA_ListView" ClassName="MainDemo.Module.BusinessObjects.Prueba.ENC_ENCOMIENDA" Caption="Encomiendas" AllowDelete="False" AllowEdit="False" AllowLink="False" AllowNew="False" PreviewColumnName="" MobileVisible="False" ShowFindPanel="False" MasterDetailView="ENC_ENCOMIENDA_DetailView" DetailViewID="ENC_ENCOMIENDA_DetailView" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Cod_Orden" PropertyName="Cod_Orden" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="COD_PROPIO" PropertyName="COD_PROPIO" Width="197" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Descripcion" PropertyName="Descripcion" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ESTADO" PropertyName="ESTADO" Width="273" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="TIPO" PropertyName="TIPO" Width="70" LookupProperty="BULTO" DataSourcePropertyIsNullMode="SelectAll" SortIndex="0" SortOrder="Ascending" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="ID_ENCOMIENDA" PropertyName="ID_ENCOMIENDA" Width="50" Index="1" IsNewNode="True" />
+      </Columns>
+      <RowLayout IsNewNode="True">
+        <RowLayoutItem Id="TIPO" Column="TIPO" ShowCaption="False" Index="1" IsNewNode="True" />
+        <RowLayoutItem Id="COD_PROPIO" Column="ID_ENCOMIENDA" ShowCaption="False" Index="2" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+    <ListView Id="RETIRAR_ListView" ClassName="MainDemo.Module.BusinessObjects.Prueba.ENC_ORDEN" Caption="Retirar" AllowDelete="False" AllowLink="False" AllowNew="False" Criteria="[ESTADO] = 'RETIRAR' And [RETIRA] = CurrentUserId()" MasterDetailView="RETIRAR_DetailView" DetailViewID="RETIRAR_DetailView" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="ID_ORDEN" PropertyName="ID_ORDEN" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="RUT" PropertyName="RUT" Width="70" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="RAZONSOCIAL" PropertyName="RAZONSOCIAL" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="REFERENCIA" PropertyName="REFERENCIA" Width="70" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="FECHA" PropertyName="FECHA" Width="70" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="COD_INTERNO" PropertyName="COD_INTERNO" Width="70" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="VIA" PropertyName="VIA" Width="70" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Owner" PropertyName="Owner" Width="70" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="EXPRESO" PropertyName="EXPRESO" Width="50" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="PORPAGAR" PropertyName="PORPAGAR" Width="50" Index="8" IsNewNode="True" />
+        <ColumnInfo Id="FLETE" PropertyName="FLETE" Width="50" Index="9" IsNewNode="True" />
+        <ColumnInfo Id="CORTEGUIA" PropertyName="CORTEGUIA" Width="50" Index="10" IsNewNode="True" />
+        <ColumnInfo Id="SEGURO" PropertyName="SEGURO" Width="50" Index="11" IsNewNode="True" />
+        <ColumnInfo Id="OTROS" PropertyName="OTROS" Width="50" Index="12" IsNewNode="True" />
+        <ColumnInfo Id="TOTAL" PropertyName="TOTAL" Width="50" Index="13" IsNewNode="True" />
+        <ColumnInfo Id="DESCUENTO" PropertyName="DESCUENTO" Width="50" Index="14" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_CANT" PropertyName="CARGA_CANT" Width="50" Index="15" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_PESO" PropertyName="CARGA_PESO" Width="50" Index="16" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_VOLUMEN" PropertyName="CARGA_VOLUMEN" Width="50" Index="17" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_ANCHO" PropertyName="CARGA_ANCHO" Width="50" Index="18" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_LARGO" PropertyName="CARGA_LARGO" Width="50" Index="19" IsNewNode="True" />
+        <ColumnInfo Id="CARGA_ALTO" PropertyName="CARGA_ALTO" Width="50" Index="20" IsNewNode="True" />
+        <ColumnInfo Id="SOBRE_PESO" PropertyName="SOBRE_PESO" Width="50" Index="21" IsNewNode="True" />
+        <ColumnInfo Id="SOBRE_CANTIDAD" PropertyName="SOBRE_CANTIDAD" Width="50" Index="22" IsNewNode="True" />
+        <ColumnInfo Id="VALIJA_CANTIDAD" PropertyName="VALIJA_CANTIDAD" Width="50" Index="23" IsNewNode="True" />
+        <ColumnInfo Id="VALIJA_PESO" PropertyName="VALIJA_PESO" Width="50" Index="24" IsNewNode="True" />
+        <ColumnInfo Id="EMISOR" PropertyName="EMISOR" Width="70" Index="25" IsNewNode="True" />
+        <ColumnInfo Id="RECEPTOR" PropertyName="RECEPTOR" Width="70" Index="26" IsNewNode="True" />
+        <ColumnInfo Id="ESTADO" PropertyName="ESTADO" Width="70" Index="27" IsNewNode="True" />
+        <ColumnInfo Id="FORMADEPAGO" PropertyName="FORMADEPAGO" Width="70" Index="28" IsNewNode="True" />
+        <ColumnInfo Id="ESTADOPAGO" PropertyName="ESTADOPAGO" Width="70" Index="29" IsNewNode="True" />
+        <ColumnInfo Id="DIRECCION_E" PropertyName="DIRECCION_E" Width="70" Index="30" IsNewNode="True" />
+        <ColumnInfo Id="DIRECCION_R" PropertyName="DIRECCION_R" Width="70" Index="31" IsNewNode="True" />
+        <ColumnInfo Id="COMUNA_E" PropertyName="COMUNA_E" Width="70" Index="32" DataSourcePropertyIsNullMode="SelectAll" LookupProperty="COMUNA" IsNewNode="True" />
+        <ColumnInfo Id="COMUNA_R" PropertyName="COMUNA_R" Width="70" Index="33" LookupProperty="COMUNA" IsNewNode="True" />
+        <ColumnInfo Id="FONO_E" PropertyName="FONO_E" Width="70" Index="34" IsNewNode="True" />
+        <ColumnInfo Id="FONO_R" PropertyName="FONO_R" Width="70" Index="35" IsNewNode="True" />
+        <ColumnInfo Id="Cod_Empresa_Orden" PropertyName="Cod_Empresa_Orden" Width="50" Index="36" IsNewNode="True" />
+        <ColumnInfo Id="Cod_Contacto_Orden" PropertyName="Cod_Contacto_Orden" Width="50" Index="37" IsNewNode="True" />
+        <ColumnInfo Id="RETIRA" PropertyName="RETIRA" Width="70" Index="38" IsNewNode="True" />
+        <ColumnInfo Id="ENTREGA" PropertyName="ENTREGA" Width="70" Index="39" IsNewNode="True" />
+      </Columns>
+      <RowLayout IsNewNode="True">
+        <RowLayoutItem Id="ORDEN" Column="ID_ORDEN" ShowCaption="False" Index="1" IsNewNode="True" />
+        <RowLayoutItem Id="EMISOR" ShowCaption="False" Index="2" Column="EMISOR" IsNewNode="True" />
+        <RowLayoutItem Id="DIRECCION" Column="DIRECCION_E" Index="3" ShowCaption="False" IsNewNode="True" />
+        <RowLayoutItem Id="COMUNA" Column="COMUNA_E" ShowCaption="False" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+  </Views>
+</Application>

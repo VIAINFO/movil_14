@@ -1,0 +1,7 @@
+{
+  "main": "widget.js",
+  "files": [
+    "sigpad.css",
+    "sigpad.js"
+  ]
+}

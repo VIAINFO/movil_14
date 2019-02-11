@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="ViaMobile" Company="Viainfo">
+  <Localization>
+    <LocalizationGroup Name="Captions">
+      <LocalizationItem Name="EmptyLabel" Value="Toque para seleccionar la imagen" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Caption="Plataforma">
+        <Items>
+          <Item Id="Arribo" Caption="Arribo" />
+          <Item Id="AboutInfo" Caption="Entregar" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views>
+    <DetailView Id="ARRIBO_DetailView">
+      <Items>
+        <PropertyEditor Id="ENC_ENCOMIENDAs" Caption="Encomiendas" />
+        <PropertyEditor Id="ENC_ENTREGASs" Caption="Registar Visita" />
+        <PropertyEditor Id="VALIJA_CANTIDAD" Caption="Valija Cantidad" />
+      </Items>
+    </DetailView>
+    <ListView Id="ARRIBO_ListView" Caption="Arribo" />
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items>
+        <StaticText Id="LogonText" Text="Bienvenido! Por favor ingrese su nombre de usuario y contraseña a continuación." Caption="" />
+        <PropertyEditor Id="Password" ToolTip="Ingrese su Contraseña" />
+        <StaticText Id="PasswordHint" Text="@ Desarrollado por Viainfo 2018" Caption="" />
+        <PropertyEditor Id="UserName" Caption="Usuario" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="RootGroup">
+            <LayoutGroup Id="ImageGroup" Caption="ImageGroup(3)" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChangePasswordParameters_DetailView">
+      <Items>
+        <StaticText Id="ChangePasswordText" Text="Para cambiar su contraseña, por favor, introduzca su contraseña anterior y la nueva en los campos de texto a continuación_1" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ENC_ENCOMIENDA_DetailView" Caption="Encomienda">
+      <Items>
+        <PropertyEditor Id="COD_PROPIO" Caption="Codigo Propio" />
+        <PropertyEditor Id="ESTADO" Caption="Estado" />
+        <PropertyEditor Id="ID_ENCOMIENDA" Caption="Encomienda" />
+        <PropertyEditor Id="TIPO" Caption="Bulto" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ENC_ENCOMIENDA">
+              <LayoutGroup Id="ENC_ENCOMIENDA_col2" Caption="ENC_ENCOMIENDA_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ENC_ENTREGAS_DetailView" Caption="Visita">
+      <Items>
+        <PropertyEditor Id="BAJO_PUERTA" Caption="Bajo_Puerta" />
+        <PropertyEditor Id="COD_ENCOMIENDA" Caption="Codigo" />
+        <PropertyEditor Id="COMENTARIO" Caption="Comentario" />
+        <PropertyEditor Id="CONFORME" Caption="Conforme" CaptionForFalse="" CaptionForTrue="" />
+        <PropertyEditor Id="FIRMA" Caption="Firma" />
+        <PropertyEditor Id="Photo" Caption="Imagen" />
+        <PropertyEditor Id="RECIBE" Caption="Recibe" />
+        <PropertyEditor Id="RUT" Caption="Rut" />
+        <PropertyEditor Id="TIMBRE" Caption="Timbre" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ENC_ENTREGAS">
+              <LayoutGroup Id="ENC_ENTREGAS_col1" Caption="ENC_ENTREGAS_col1" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ENC_ENTREGAS_ListView" Caption="Registros" />
+    <ListView Id="ENC_ENTREGAS_LookupListView" Caption="Registros" />
+    <DetailView Id="ENC_ORDEN_DetailView">
+      <Items>
+        <PropertyEditor Id="ENC_ENCOMIENDAs" Caption="Detalle Encomiendas" />
+        <PropertyEditor Id="Photo" Caption="Foto" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item1" Caption="Item1" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ENTREGAR_DetailView">
+      <Items>
+        <PropertyEditor Id="ENC_ENCOMIENDAs" Caption="Encomiendas" />
+        <PropertyEditor Id="ENC_ENTREGASs" Caption="Registar Visita" />
+        <PropertyEditor Id="VALIJA_CANTIDAD" Caption="Valija Cantidad" />
+      </Items>
+    </DetailView>
+    <ListView Id="ENTREGAR_ListView" Caption="Entregar" />
+    <DetailView Id="RETIRAR_DetailView">
+      <Items>
+        <PropertyEditor Id="ENC_ENCOMIENDAs" Caption="Encomiendas" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item1" Caption="Item1" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RETIRAR_ENCOMIENDA_ListView" Caption="Encomiendas_1" />
+  </Views>
+</Application>
